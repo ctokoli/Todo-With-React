@@ -3,7 +3,7 @@ const TodosList = ({ todosProps }) => {
     return ( 
         <ul>
             {todosProps.map((todo) => (
-               <TodoItem todoItem={todo}/>
+               <TodoItem key={todo.id} todoItem={todo}/>
             ))}
         </ul>
      );
