@@ -3,8 +3,7 @@ import TodosList from "@/components/TodosList";
 import { useState } from "react";
  
 
-const TodosLogic = () => {
-    
+const TodosLogic = () => { 
     const [todos, setTodos] = useState([
         {
           id: 1,
@@ -27,11 +26,33 @@ const TodosLogic = () => {
           completed: true,
         },
       ]);
+
+      const handleChange = (id) => {
+      setTodos((prevState) => 
+        prevState.map((todo) => {
+           if(todo.id === id){
+             return {
+                ...todo,
+                completed: !todo.completed
+            };
+           }
+           return todo;
+        })
+      )
+    }
+
+    const delTodo = (id) => {
+      console.log('clicked', id)
+    }
       
     return ( 
         <div>
             <InputTodo/>
-            <TodosList todosProps={todos} setTodos={setTodos}/>  
+            <TodosList 
+              todosProps={todos} 
+              handleChange={handleChange}
+              delTodo={delTodo}
+              />  
         </div>
      );
 }
