@@ -6,7 +6,6 @@ const InputTodo = () => {
 
    const handleChange = (e) => {
     setTitle(e.target.value)
-    
    }
     return ( 
         <form>
