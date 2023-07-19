@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 const TodoItem = ({todoItem, handleChange, delTodo}) => {
-    
     return (
     <li>
         <input 
