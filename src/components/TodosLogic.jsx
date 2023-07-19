@@ -4,7 +4,8 @@ import { useState } from "react";
  
 
 const TodosLogic = () => {
-    const [todos, setTodo] = useState([
+    
+    const [todos, setTodos] = useState([
         {
           id: 1,
           title: 'Setup development environment',
@@ -26,13 +27,11 @@ const TodosLogic = () => {
           completed: true,
         },
       ]);
-      console.log('====================================');
-      console.log(setTodo);
-      console.log('====================================');
+      
     return ( 
         <div>
             <InputTodo/>
-            <TodosList todosProps={todos} setTodo={setTodo}/>  
+            <TodosList todosProps={todos} setTodos={setTodos}/>  
         </div>
      );
 }
