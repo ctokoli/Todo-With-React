@@ -1,5 +1,11 @@
 const TodoItem = ({todoItem}) => {
-    return <li>{todoItem.title}</li>; 
+    
+    return (
+    <li>
+        <input type="checkbox" />
+        {todoItem.title}
+    </li>
+    );
 }
  
 export default TodoItem;
