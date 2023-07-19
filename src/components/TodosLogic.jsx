@@ -20,6 +20,11 @@ const TodosLogic = () => {
           title: 'Deploy to live server',
           completed: false,
         },
+        {
+          id: 4,
+          title: 'Deploy to live servers',
+          completed: true,
+        },
       ]);
       console.log('====================================');
       console.log(setTodo);
