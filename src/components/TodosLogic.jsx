@@ -44,7 +44,7 @@ const TodosLogic = () => {
     const delTodo = (id) => {
       setTodos([
         ...todos.filter((todo) => {
-          return todo.id != id;
+          return todo.id !== id;
         })
       ]);
     }
